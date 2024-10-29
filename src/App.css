@@ -1,42 +1,291 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .main-page-logo {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+nav .main-page-logo img {
+  width: 15vh;
+}
+
+nav .main-page-user-area {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+  color: #3f3d56;
+}
+
+.welcome-user-with-total-task {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: auto;
+}
+
+.welcome-user-left-area {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.welcome-user-left-area h2 {
+  color: #3f3d56;
+}
+
+.welcome-user-left-area span {
+  color: #007fff;
+}
+
+.welcome-user-left-area p {
+  color: #3f3d56;
+}
+
+.welcome-user-right-area {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.welcome-user-right-area input {
+  width: 15vw;
+  height: 5vh;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  background-color: #f5f7f9;
+}
+
+.welcome-user-right-area input:focus{
+  outline: 1px solid #007fff;
+}
+
+.add-task-form-main-area {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow: auto;
+}
+
+.add-new-task-form-area {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  color: #3f3d56;
+}
+
+.add-new-task-form-area img {
+  width: 2%;
+}
+
+.add-new-task-button-form-area {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+
+.add-new-task-button-form-area input {
+  width: 20vw;
+  height: 5vh;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.add-new-task-button-form-area input:focus {
+  outline: 1px solid #007fff;
+}
+
+.add-new-task-button-form-area .btn-primary {
+  width: 20vh;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #007fff;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-danger {
+  width: 20vw;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff8c8c49;
+  color: red;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.task-list-main-content-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.no-tasks-message {
+  width: 70%;
+  height: 100%;
+  padding: 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+
+.no-task-message-text {
+  width: 100%;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.task-list-main-content-area .tasks-list-area-main {
+  width: 70%;
+  height: 100%;
+  background-color: #f5f7f9;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.tasks-list-area-main-left {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+}
+
+.tasks-list-area-main-left p{
+  width: 100%;
+  height: 100%;
+}
+
+.tasks-list-area-main-left p::-webkit-scrollbar {
+  display: none;
+}
+
+.tasks-list-area-main-right {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.tasks-list-area-main-right img {
+  width: 25%;
+  cursor: pointer;
+}
+
+.check {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #d4dbe4;
+  background-color: transparent;
+}
+
+@media (max-width: 480px) {
+  nav .main-page-logo img {
+    width: 10vh;
   }
-  to {
-    transform: rotate(360deg);
+  nav .main-page-user-area img{
+    width: 5vh;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .welcome-user-with-total-task {
+    flex-direction: column;
+    gap: 10px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .welcome-user-left-area {
+    width: 70%;
+  }
+  .welcome-user-right-area {
+    width: 70%;
+    justify-content: center;
+  }
+  .welcome-user-right-area input{
+    width: 100%;
+  }
+  .add-new-task-form-area img{
+    width: 8%;
+  }
+  .add-new-task-button-form-area {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .add-new-task-button-form-area input{
+    width: 100%;
+  }
+  .add-new-task-button-form-area .btn-primary {
+    width: 100%;
+  }
+  .btn-danger {
+    width: 100%;
+  }
+  .tasks-list-area-main-right {
+    width: 30%;
+  }
+  .tasks-list-area-main-left{
+    gap: 5px;
+  }
+  .tasks-list-area-main-right {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .tasks-list-area-main-left p{
+    width: 100%;
+    height: 100%;
+    text-wrap: wrap;
+  }
 }

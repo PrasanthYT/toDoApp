@@ -12,7 +12,7 @@ A simple React-based task management app that lets users add, edit, complete, an
 
 ## Demo
 
-![Deployed Link](https://prasanthtodoapp.netlify.app/)
+[Deployed Link](https://prasanthtodoapp.netlify.app/)
 
 ## Installation
 
@@ -44,7 +44,7 @@ A simple React-based task management app that lets users add, edit, complete, an
 
 ## Project Structure
 
-    ```bash
+```bash
     src
     ├── assets                # Images (e.g., Plus, Edit, and Delete icons)
     ├── components
@@ -54,26 +54,24 @@ A simple React-based task management app that lets users add, edit, complete, an
     ├── services
     │   └── api.js            # API calls to manage tasks
     └── App.jsx               # Main component
-    ```
+```
 
 ## Component Details
+### App.jsx
+- Manages state for tasks, editing, and current task.
+- Handles adding, editing, deleting, and clearing tasks.
+- Sorts tasks based on completion status.
 
-    ==App.jsx==
+### AddTaskForm.jsx
+- A form to add or edit a task, with conditional rendering for the "Clear All Tasks" button.
 
-    Manages state for tasks, editing, and current task.
-    Handles adding, editing, deleting, and clearing tasks.
-    Sorts tasks based on completion status.
+### TaskList.jsx
+- Displays a list of TaskItem components.
+- Shows a message when there are no tasks.
 
-    ==AddTaskForm.jsx==
-    A form to add or edit a task, with conditional rendering for the "Clear All Tasks" button.
-
-    ==TaskList.jsx==
-    Displays a list of TaskItem components.
-    Shows a message when there are no tasks.
-
-    ==TaskItem.jsx==
-    Displays an individual task with options to mark complete, edit, and delete.
-    Strikes out and moves the completed tasks to the bottom.
+### TaskItem.jsx
+- Displays an individual task with options to mark complete, edit, and delete.
+- Strikes out and moves the completed tasks to the bottom.
 
 ## API
 

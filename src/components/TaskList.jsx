@@ -1,7 +1,6 @@
 import React from "react";
 import TaskItem from "./TaskItem";
 import No from "../assets/no.png";
-import Delete from "../assets/cross.png";
 
 const TaskList = ({ tasks, onEditTask, onDeleteTask, onToggleComplete }) => {
   return (

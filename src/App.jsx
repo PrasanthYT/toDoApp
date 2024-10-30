@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { deleteAllTasks, deleteTask, getTasks } from "./services/api";
 import AddTaskForm from "./components/AddTaskForm";
 import TaskList from "./components/TaskList";
@@ -10,6 +10,8 @@ const App = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [currentTask, setCurrentTask] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+
+  const inputRef = useRef(null);
 
   useEffect(() => {
     getTasks().then(setTasks);
@@ -42,6 +44,7 @@ const App = () => {
   const startEditing = (task) => {
     setIsEditing(true);
     setCurrentTask(task);
+    inputRef.current.focus();
   };
 
   const handleToggleComplete = (taskId) => {
@@ -83,7 +86,7 @@ const App = () => {
             type="search"
             name="search"
             id="search"
-            placeholder="Search..."
+            placeholder="Search Task..."
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
@@ -95,6 +98,7 @@ const App = () => {
         onEditTask={handleEditTask}
         onClearAllTasks={handleDeleteAllTask}
         tasks={tasks}
+        inputRef={inputRef}
       />
       <TaskList
         tasks={filteredTasks}

@@ -8,6 +8,7 @@ const AddTaskForm = ({
   onEditTask,
   onClearAllTasks,
   tasks,
+  inputRef
 }) => {
   const [taskName, setTaskName] = useState("");
 
@@ -39,6 +40,7 @@ const AddTaskForm = ({
         <input
           type="text"
           value={taskName}
+          ref={inputRef}
           onChange={(e) => setTaskName(e.target.value)}
           placeholder={isEditing ? "Edit task" : "Add a new task"}
           required
